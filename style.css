@@ -1,0 +1,73 @@
+body {
+    background-color: #384654;
+    margin: 0px 0px 10px 0px;
+    font-size: 18px;
+}
+
+header {
+    text-align: center;
+}
+
+#title {
+    background-color: #2b3239;
+}
+
+#head-table {
+    margin: auto;
+    width: 50%;
+    background-color: #393f45;
+}
+
+.head-link {
+    color: #ffbd9b;
+    font-size: 20px;
+}
+
+#nav-bar {
+    background-color: #393f45;
+    margin-bottom: 10px;
+}
+
+h1 {
+    color: #ff6a1f;
+    margin: 0px;
+    text-align: center;
+}
+
+main {
+    border: 3px ridge #2b3239;
+    width: 95%;
+    height: 100vh;
+    margin: auto;
+    position: relative;
+}
+
+.main-content-div {
+    border: 1px solid black;
+    position: absolute;
+    background-color: #4f6275;
+    width: 50%;
+    height: 50%;
+    padding: 5px;
+}
+
+#about-me {
+    top: 0;
+    left: 0;
+    z-index: 0;
+}
+
+#why-i-made-this {
+    top: 0;
+    right: 0;
+}
+
+#music-recs {
+    bottom: 0;
+    left: 0;
+}
+
+#movie-recs {
+    bottom: 0;
+    right: 0;
+}
