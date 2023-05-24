@@ -2,6 +2,7 @@ body {
     background-color: #384654;
     margin: 0px 0px 10px 0px;
     font-size: 18px;
+    color: #feebb2;
 }
 
 header {
@@ -35,26 +36,29 @@ h1 {
 }
 
 main {
-    border: 3px ridge #2b3239;
+    border: 4px ridge #2b3239;
     width: 95%;
     height: 100vh;
     margin: auto;
     position: relative;
+    box-sizing: border-box;
+    overflow: hidden;
 }
 
 .main-content-div {
-    border: 1px solid black;
+    border: 2px solid #2b3239;
     position: absolute;
     background-color: #4f6275;
     width: 50%;
     height: 50%;
     padding: 5px;
+    box-sizing: border-box;
+    overflow: scroll;
 }
 
 #about-me {
     top: 0;
     left: 0;
-    z-index: 0;
 }
 
 #why-i-made-this {
@@ -70,4 +74,23 @@ main {
 #movie-recs {
     bottom: 0;
     right: 0;
+}
+
+@media screen and (max-width: 500px) {
+    
+    main {
+        overflow: scroll;
+        width: 100%;
+        border: none;
+    }
+
+    .main-content-div {
+        position: relative;
+        width: 100%;
+    }
+
+    #nav-bar {
+        margin-bottom: 0px;
+    }
+    
 }
