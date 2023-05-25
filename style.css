@@ -1,12 +1,18 @@
+* {box-sizing: border-box;}
+
 body {
     background-color: #384654;
-    margin: 0px 0px 10px 0px;
+    margin: 0;
     font-size: 18px;
     color: #feebb2;
 }
 
 header {
     text-align: center;
+}
+
+#selected-section {
+    background-color: #2b3239;
 }
 
 #title {
@@ -26,7 +32,7 @@ header {
 
 #nav-bar {
     background-color: #393f45;
-    margin-bottom: 10px;
+    margin-bottom: 10vh;
 }
 
 h1 {
@@ -35,62 +41,57 @@ h1 {
     text-align: center;
 }
 
-main {
-    border: 4px ridge #2b3239;
-    width: 95%;
-    height: 100vh;
+h2 {
+    color: #ff6a1f;
+    margin: 0;
+}
+
+h3 {
+    margin: 0;
+}
+
+#main-content {
+    border: 4px ridge #15467b;
+    border-radius: 20px;
+    background-color: #5c6d7e;
+    width: 70%;
+    height: 70vh;
     margin: auto;
-    position: relative;
-    box-sizing: border-box;
     overflow: hidden;
+    position: relative;
+    padding: 50px;
 }
 
-.main-content-div {
-    border: 2px solid #2b3239;
+#pfp {
+    width: 140px;
+    margin: 0;
+    vertical-align: middle;
+}
+
+#pfp-container {
+    border: 2px solid #384654;
+    border-radius: 50%;
+    width: fit-content;
+    height: fit-content;
+    overflow: hidden;
+    float: left;
+}
+
+#basic-information {
+    position: relative;
+    display: inline-block;
+}
+
+#basic-info-text {
+    height: fit-content;
+    width: 150px;
+    display: inline-block;
+    margin-left: 15px;
     position: absolute;
-    background-color: #4f6275;
-    width: 50%;
-    height: 50%;
-    padding: 5px;
-    box-sizing: border-box;
-    overflow: scroll;
-}
-
-#about-me {
-    top: 0;
-    left: 0;
-}
-
-#why-i-made-this {
-    top: 0;
-    right: 0;
-}
-
-#music-recs {
-    bottom: 0;
-    left: 0;
-}
-
-#movie-recs {
-    bottom: 0;
-    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 @media screen and (max-width: 500px) {
-    
-    main {
-        overflow: scroll;
-        width: 100%;
-        border: none;
-    }
 
-    .main-content-div {
-        position: relative;
-        width: 100%;
-    }
-
-    #nav-bar {
-        margin-bottom: 0px;
-    }
-    
 }
