@@ -1,7 +1,7 @@
 * {box-sizing: border-box;}
 
 body {
-    background-color: #384654;
+    background-color: #43586d;
     margin: 0;
     font-size: 18px;
     color: #feebb2;
@@ -51,15 +51,16 @@ h3 {
 }
 
 #main-content {
-    border: 4px ridge #15467b;
+    border: 3px solid #feebb2;
     border-radius: 20px;
-    background-color: #5c6d7e;
+    background-color: #1a334c;
     width: 70%;
     height: 70vh;
     margin: auto;
     overflow: hidden;
     position: relative;
     padding: 50px;
+    overflow: scroll;
 }
 
 #pfp {
@@ -69,7 +70,7 @@ h3 {
 }
 
 #pfp-container {
-    border: 2px solid #384654;
+    border: 3px solid #feebb2;
     border-radius: 50%;
     width: fit-content;
     height: fit-content;
@@ -92,6 +93,26 @@ h3 {
     transform: translateY(-50%);
 }
 
-@media screen and (max-width: 500px) {
+.more-information {
+    width: 30%;
+    border: 3px outset #feebb2;
+    padding: 5px;
+    margin-bottom: 40px;
+    display: block;
+    background-color: #1a334c;
+    color: #feebb2;
+    font-size: 18px;
+}
+
+.more-information:hover {
+    border: 3px inset #feebb2;
+    cursor: pointer;
+}
+
+#more-info-container {
+    margin-top: 50px;
+}
+
+@media screen and (max-width: 700px) {
 
 }
