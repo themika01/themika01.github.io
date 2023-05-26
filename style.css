@@ -81,6 +81,7 @@ h3 {
 #basic-information {
     position: relative;
     display: inline-block;
+    margin-bottom: 25px;
 }
 
 #basic-info-text {
@@ -94,7 +95,7 @@ h3 {
 }
 
 .more-information {
-    width: 30%;
+    width: 100%;
     border: 3px outset #feebb2;
     padding: 5px;
     margin-bottom: 40px;
@@ -104,13 +105,43 @@ h3 {
     font-size: 18px;
 }
 
+.more-information-selected {
+    width: 100%;
+    border: 3px outset #feebb2;
+    padding: 5px;
+    margin-bottom: 40px;
+    display: block;
+    background-color: #214569;
+    color: #feebb2;
+    font-size: 18px; 
+}
+
 .more-information:hover {
     border: 3px inset #feebb2;
     cursor: pointer;
 }
 
+.more-information-selected:hover {
+    border: 3px inset #feebb2;
+    cursor: pointer;
+}
+
 #more-info-container {
-    margin-top: 50px;
+    display: inline-block;
+    width: 25%;
+    margin-right: 20px;
+}
+
+.button-content-hidden {
+   display: none;
+}
+
+.button-content-shown {
+    border: 3px outset #feebb2;
+    display: inline-block;
+    width: 70%;
+    padding: 5px;
+    position: absolute;
 }
 
 @media screen and (max-width: 700px) {
