@@ -7,6 +7,18 @@ body {
     color: #feebb2;
 }
 
+a {
+    color: #feebb2;
+}
+
+a:visited {
+    color: #ffe189;
+}
+
+td {
+    text-align: center;
+}
+
 header {
     text-align: center;
 }
@@ -36,13 +48,13 @@ header {
 }
 
 h1 {
-    color: #ff6a1f;
+    color: #FF6C22;
     margin: 0px;
     text-align: center;
 }
 
 h2 {
-    color: #ff6a1f;
+    color: #FF6C22;
     margin: 0;
 }
 
@@ -111,7 +123,7 @@ h3 {
     padding: 5px;
     margin-bottom: 40px;
     display: block;
-    background-color: #214569;
+    background-color: #174875;
     color: #feebb2;
     font-size: 18px; 
 }
@@ -138,12 +150,36 @@ h3 {
 
 .button-content-shown {
     border: 3px outset #feebb2;
+    background-color: #133452;
     display: inline-block;
     width: 70%;
-    padding: 5px;
+    padding: 15px;
     position: absolute;
 }
 
-@media screen and (max-width: 700px) {
+#music-content {
+    top: 50%;
+    transform: translateY(-50%);
+}
 
+#music-table {
+    width: 100%;
+}
+
+@media screen and (max-width: 700px) {
+    
+    #nav-bar {
+        margin-bottom: 0;
+    }
+    
+    #main-content {
+        border-radius: 0px;
+        width: 100%;
+        height: 100vh;
+        padding: 10px;
+    }
+
+    .button-content-shown {
+        width: 60%;
+    }
 }

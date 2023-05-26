@@ -21,7 +21,7 @@ const showAboutContent = function(btnNumber) {
         aboutContent[i].className = "button-content-hidden"
         aboutBtns[i].className = "more-information"
     }
-    if (shown == false || shown == true && lastSelect != btnNumber) {
+    if (shown == false || shown == true && lastSelect != btnNumber) { //Open selected content
         aboutBtns[btnNumber].className = "more-information-selected"
         aboutContent[btnNumber].className = "button-content-shown"
         lastSelect = btnNumber
