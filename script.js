@@ -26,7 +26,7 @@ const showAboutContent = function(btnNumber) {
         aboutContent[btnNumber].className = "button-content-shown"
         lastSelect = btnNumber
         shown = true
-    } else { //Hide all content if the user clicks on the same button they opened
+    } else { //Dont show any if the user clicks on the same button they opened
         lastSelect = -1
         shown = false
     }

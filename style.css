@@ -15,8 +15,13 @@ a:visited {
     color: #ffe189;
 }
 
-td {
+#musicstuff {
     text-align: center;
+}
+
+figure {
+    text-align: center;
+    display: inline-block;
 }
 
 header {
