@@ -7,10 +7,6 @@ body {
     color: #feebb2;
 }
 
-div {
-    overflow: scroll;
-}
-
 a {
     color: #feebb2;
 }
@@ -174,6 +170,7 @@ h3 {
     width: 70%;
     padding: 15px;
     position: absolute;
+    overflow: scroll;
 }
 
 #music-table {
@@ -195,5 +192,41 @@ h3 {
 
     .button-content-shown {
         width: 60%;
+    }
+
+    .more-information {
+        width: 25%;
+        position: absolute;
+    }
+
+    .more-information-selected {
+        position: absolute;
+        width: 25%;
+    }
+    
+    #about {
+        left: 0;
+    }
+
+    #socials {
+        left: 25%;
+    }
+
+    #music {
+        left: 50%;
+    }
+
+    #movie {
+        left: 75%;
+    }
+
+    .button-content-shown {
+        top: 35%;
+    }
+
+    .button-content-shown {
+        width: 100%;
+        position: absolute;
+        left: 0;
     }
 }
