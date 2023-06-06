@@ -1,0 +1,1 @@
+-Make small box take whole screen on half-height too.
