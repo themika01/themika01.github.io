@@ -1,0 +1,96 @@
+body {
+    background-color: #dadada;
+    color: #09003d;
+}
+
+h1, h3, h2, h4 {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+section {
+    margin-bottom: 40px;
+}
+
+#hero-section {
+    position: relative;
+    width: 100%;
+    height: 80vh;
+    background-image:
+        linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.3)),
+        url("img/heroImage.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+#mission-image {
+    background-image: url("img/lgbtacronym.jpg");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 300px;
+  }
+
+#stonewall-image {
+    background-image: url("img/stonewall.jpg");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 300px;
+  }
+
+  #old-image {
+    background-image: url("img/reminder.png");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 500px;
+  }
+
+  #march-image {
+    background-image: url("img/march.png");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 300px;
+  }
+
+  #biden-image {
+    background-image: url("img/biden.jpg");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 300px;
+  }
+
+  #ad-image {
+    background-image: url("img/ad.png");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 300px;
+  }
+
+  #trans-image {
+    background-image: url("img/transflag.jpg");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 300px;
+  }
+
+  #tucson-image {
+    background-image: url("img/tucsonpride.jpg");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 300px;
+  }
+
+  #glf-image {
+    background-image: url("img/glf.jpg");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 300px;
+  }
