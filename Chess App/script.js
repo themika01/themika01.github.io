@@ -65,14 +65,14 @@ let p5 = new Piece("wPawn", wPawnImage, 400, 600, "white pawn 5");
 let p6 = new Piece("wPawn", wPawnImage, 500, 600, "white pawn 6");
 let p7 = new Piece("wPawn", wPawnImage, 600, 600, "white pawn 7");
 let p8 = new Piece("wPawn", wPawnImage, 700, 600, "white pawn 8");
-let r1 = new Piece("wRook", wRookImage, 0, 700, "white rook 1");
-let r2 = new Piece("wRook", wRookImage, 700, 700, "white rook 2");
-let n1 = new Piece("wKnight", wKnightImage, 100, 700, "white knight 1");
-let n2 = new Piece("wKnight", wKnightImage, 600, 700, "white knight 2");
-let b1 = new Piece("wBishop", wBishopImage, 200, 700, "white bishop 1");
-let b2 = new Piece("wBishop", wBishopImage, 500, 700, "white bishop 2");
-let q1 = new Piece("wQueen", wQueenImage, 300, 700, "white queen");
-let k1 = new Piece("wKing", wKingImage, 400, 700, "white king");
+let r1 = new Piece("Rook", wRookImage, 0, 700, "white rook 1");
+let r2 = new Piece("Rook", wRookImage, 700, 700, "white rook 2");
+let n1 = new Piece("Knight", wKnightImage, 100, 700, "white knight 1");
+let n2 = new Piece("Knight", wKnightImage, 600, 700, "white knight 2");
+let b1 = new Piece("Bishop", wBishopImage, 200, 700, "white bishop 1");
+let b2 = new Piece("Bishop", wBishopImage, 500, 700, "white bishop 2");
+let q1 = new Piece("Queen", wQueenImage, 300, 700, "white queen");
+let k1 = new Piece("King", wKingImage, 400, 700, "white king");
 let whitePieces = [p1, p2, p3, p4, p5, p6, p7 ,p8, r1, r2, n1, n2, b1, b2, q1, k1];
 //Black
 let pa = new Piece("bPawn", bPawnImage, 0, 100, "black pawn 1");
@@ -83,14 +83,14 @@ let pe = new Piece("bPawn", bPawnImage, 400, 100, "black pawn 5");
 let pf = new Piece("bPawn", bPawnImage, 500, 100, "black pawn 6");
 let pg = new Piece("bPawn", bPawnImage, 600, 100, "black pawn 7");
 let ph = new Piece("bPawn", bPawnImage, 700, 100, "black pawn 8");
-let ra = new Piece("bRook", bRookImage, 0, 0, "black rook 1");
-let rb = new Piece("bRook", bRookImage, 700, 0, "black rook 2");
-let na = new Piece("bKnight", bKnightImage, 100, 0, "black knight 1");
-let nb = new Piece("bKnight", bKnightImage, 600, 0, "black knight 2");
-let ba = new Piece("bBishop", bBishopImage, 200, 0, "black bishop 1");
-let bb = new Piece("bBishop", bBishopImage, 500, 0, "black bishop 2");
-let qa = new Piece("bQueen", bQueenImage, 300, 0, "black queen");
-let ka = new Piece("bKing", bKingImage, 400, 0, "black king");
+let ra = new Piece("Rook", bRookImage, 0, 0, "black rook 1");
+let rb = new Piece("Rook", bRookImage, 700, 0, "black rook 2");
+let na = new Piece("Knight", bKnightImage, 100, 0, "black knight 1");
+let nb = new Piece("Knight", bKnightImage, 600, 0, "black knight 2");
+let ba = new Piece("Bishop", bBishopImage, 200, 0, "black bishop 1");
+let bb = new Piece("Bishop", bBishopImage, 500, 0, "black bishop 2");
+let qa = new Piece("Queen", bQueenImage, 300, 0, "black queen");
+let ka = new Piece("King", bKingImage, 400, 0, "black king");
 let blackPieces = [pa, pb, pc, pd, pe, pf, pg ,ph, ra, rb, na, nb, ba, bb, qa, ka];
 let allPieces = [p1, p2, p3, p4, p5, p6, p7 ,p8, r1, r2, n1, n2, b1, b2, q1, k1, pa, pb, pc, pd, pe, pf, pg ,ph, ra, rb, na, nb, ba, bb, qa, ka]
 
@@ -127,26 +127,63 @@ addEventListener("load", (event) => {
     });
 });
 
-// Find a piece clicked on from mouse coordinate on board
-// Mouse coordinates are supplied from getCursorPosition function
-let pieceFound = false;
-let isPieceSelected = false;
-let selectedPiece = 0;
-function findClickedPiece(x, y) {
-    console.log(`X: ${x} Y: ${y}`);
-    pieceFound = false;
-    let i = 0;
-    while(!pieceFound) { // Call checkPiece() on each array item until a piece is found
-        checkPiece(x, y, i); // Done as a separate if statement function to improve efficiency.
-        i++;
+
+function createPieceMoveset(pieceType) {
+    let validMoves = [[], []]; // First array is for X values, second for Y values
+    switch (pieceType) {
+        case "wPawn":
+            validMoves = createPawnArray();
+            break;
+        case "bPawn": // These have different movesets but can still be dealt with by the same function
+            validMoves = createPawnArray();
+            break;
+        case "King":
+            validMoves = createKingArray();
+            break;
+    }
+    return validMoves;
+}
+// Highlight the tiles a piece can move to when selected
+function highlightPieceMoveset() {
+    let validMoves = createPieceMoveset(selectedPiece.type)
+    ctx.fillStyle = "rgba(0, 153, 51, 0.5)"; // Transparent green
+    console.log(validMoves)
+    for(let i = 0; i<validMoves.length; i++) {
+        // Go through each item in the nested array and highlight green at [[x coord], [y coord]]
+        for(let j = 0; j<validMoves[i].length; j++) {
+            ctx.fillRect(validMoves[0][j], validMoves[1][j], 100, 100);
+        }
     }
 }
-function checkPiece(x, y, i) { // If provided piece is equal to the place clicked, coords privded by findClickedPiece(), select that piece.
-    if (allPieces[i].positX == x && allPieces[i].positY == y) {
-        pieceFound = true;
-        isPieceSelected = true;
-        selectedPiece = allPieces[i];
+
+function createPawnArray() {
+    let pawnMoves = [[0, 0], [0, 0]];
+    console.log(selectedPiece.type);
+    if(selectedPiece.type == "wPawn") {
+        pawnMoves[0][0] = selectedPiece.positX;
+        pawnMoves[0][1] = selectedPiece.positX;
+        pawnMoves[1][0] = selectedPiece.positY - 100;
+        pawnMoves[1][1] = selectedPiece.positY - 200;
+    } else {
+        pawnMoves[0][0] = selectedPiece.positX;
+        pawnMoves[0][1] = selectedPiece.positX;
+        pawnMoves[1][0] = selectedPiece.positY + 100;
+        pawnMoves[1][1] = selectedPiece.positY + 200;
     }
+    return pawnMoves;
+}
+
+function createKingArray() {
+    let kingMoves = [[0, 1, 2, 3], [0, 1, 2, 3]];
+    kingMoves[0][0] = selectedPiece.positX-100;
+    kingMoves[1][0] = selectedPiece.positY;
+    kingMoves[0][1] = selectedPiece.positX+100;
+    kingMoves[1][1] = selectedPiece.positY;
+    kingMoves[0][2] = selectedPiece.positX;
+    kingMoves[1][2] = selectedPiece.positY+100;
+    kingMoves[0][3] = selectedPiece.positX;
+    kingMoves[1][3] = selectedPiece.positY-100;
+    return kingMoves;
 }
 
 // Deletes old image of a piece after creating a new one from moving
@@ -160,104 +197,25 @@ function fillOldTile(x, y) {
     }
 }
 
-// Pathfinding and collision detection starts here
-// Find which direction the piece is moving in - moving up/left on the board is a movement by -100 on the grid.
-function findDirectionX(startX, newX) {
-    let incrementX = -1;
-    if(startX < newX) {
-        incrementX = -100;
-    } else {
-        incrementX = 100;
-    }
-    return incrementX;
-}
-
-function findDirectionY(startY, newY) {
-    let incrementY = -1;
-    if(startY < newY) {
-        incrementY = -100;
-    } else {
-        incrementY = 100;
-    }
-    return incrementY;
-}
-
-// Add the direction increment to the piece starting position until it reaches the designated new position
-// Add each position on the way to the new spot to an array to check for matching positions of other pieces later
-function createPathX(startX, newX) {
-    console.log("Function called")
-    let incrementX = findDirectionX(startX, newX);
-    let positionX = [];
-    let currentX = startX;
-    while(currentX != newX) { // I think this results in an infinite loop? Should increment the X value until it reaches the newX (just less than or greater than wouldnt work, because pieces can move left or right)
-        console.log("Loop called") // But, I don't see this in the console when I move a piece. Maybe it never gets called, maybe the browser prevents it from looping?
-        currentX += incrementX;
-        positionX.push(currentX);
-    }
-    return positionX;
-}
-
-// Same thing but for Y
-function createPathY(startY, newY) {
-    let incrementY = findDirectionY(startY, newY);
-    let positionY = [];
-    let currentY = startY;
-    while(currentY != newY) { // I think this results in an infinite loop?
-        currentY += incrementY;
-        positionY.push(currentY);
-    }
-    return positionY;
-}
-
-// Ugly and evil function that is broken, inefficient, and should not exist
-// The idea is that it should take arrays from the the create path functions to determine what tiles the piece will "pass over"
-// Then, it should check if any of the other pieces on the board have matching X and Y coordinates to anything on the path
-// Any piece other than a knight should not be able to move over others
-function checkPath(arrayX, arrayY) {
-    console.log("checking");
-    for(let i = 0; i<arrayX.length && i<arrayY.length; i++) {
-        let lastX = arrayX[arrayX.length - 1];
-        let lastY = arrayY[arrayY.length - 1];
-        let currentX = 0;
-        let currentY = 0;
-        // If one array is shorter than the other, it should continue using the last position on the array,
-        // which would be the final target movement position.
-        // Basically, it has already "reached" the target coordinate on one dimension,
-        // And so it should continue on the other dimension until both targets are reached.
-        if(arrayX[i] == undefined) { 
-            currentX = lastX;
-        } else {
-            currentX = arrayX[i];
-        }
-
-        if(arrayY[i] == undefined) {
-            currentY = lastY;
-        } else {
-            currentY = arrayY[i];
-        }
-        
-        // Check if the current coordinate on the path collides with any other piece on the board
-        // In my tests, this never even gets called. I think the process breaks before this.
-        for(let i = 0; i<allPieces.length; i++) {
-            if (allPieces[i].positX == currentX && allPieces[i].positY == currentY) {
-                console.log(`FUCK YOU X: ${allPieces[i].positX} Y: ${allPieces[i].positY} NAME: ${allPieces[i].name}`);
+function removeHighlightedAreas() {
+    let oldMoves = createPieceMoveset(selectedPiece.type);
+    for(let i = 0; i<oldMoves.length; i++) {
+        // Go through each item in the nested array and highlight green at [[x coord], [y coord]]
+        for(let j = 0; j<oldMoves[i].length; j++) {
+            if((((oldMoves[0][j]/100) + (oldMoves[1][j]/100))%2) == 0) {
+                ctx.fillStyle = "#eeeed2";
+            } else {
+                ctx.fillStyle = "#630";
             }
+            ctx.fillRect(oldMoves[0][j], oldMoves[1][j], 100, 100);
         }
     }
-}
-
-// The small function that brings it all together. Once everything works properly, it should return true/false based on if it detects collision or not.
-function checkPathMovementForCollision(startX, newX, startY, newY) {
-    let pathX = createPathX(startX, newX);
-    let pathY = createPathY(startY, newY);
-    checkPath(pathX, pathY);
 }
 
 // Creates a new image of the piece moved in the new tile, calls fillOldTile, updates piece position variables, and deselects the piece.
 function movePiece(x, y) {
     if((selectedPiece.positX != x || selectedPiece.positY != y)) { // Dont move pieces on top of themself
-        // checkPathMovementForCollision(selectedPiece.positX, x, selectedPiece.positY, y); (uncommenting this will crash the browser if you try to move a piece :3)
-        // Whatever old function I had to not move pieces on top of other pieces no worky after I made the pathfinding function, so I gotta do that again.
+        removeHighlightedAreas();
         isPieceSelected = false;
         ctx.drawImage(selectedPiece.image, x, y);
         fillOldTile(selectedPiece.positX, selectedPiece.positY);
@@ -268,7 +226,31 @@ function movePiece(x, y) {
     }
 }
 
-// Detect mouse coordinates to nearest hundred, see if it landed on a piece if there isn't one already selected. If a piece is already selected, call movePiece.
+// Find a piece clicked on from mouse coordinate on board
+// Mouse coordinates are supplied from getCursorPosition function
+let pieceFound = false;
+let isPieceSelected = false;
+let selectedPiece = 0;
+function findClickedPiece(x, y) {
+    console.log(`X: ${x} Y: ${y}`);
+    pieceFound = false;
+    let i = 0;
+    while(!pieceFound || i<allPieces.length-1) { // Call checkPiece() on each array item until a piece is found
+        checkPiece(x, y, i); // Done as a separate if statement function to improve efficiency.
+        i++;
+    }
+}
+function checkPiece(x, y, i) { // If provided piece is equal to the place clicked, coords privded by findClickedPiece(), select that piece.
+    if (allPieces[i].positX == x && allPieces[i].positY == y) {
+        pieceFound = true;
+        isPieceSelected = true;
+        selectedPiece = allPieces[i];
+        highlightPieceMoveset();
+    }
+}
+
+// Detect mouse coordinates to nearest hundred, see if it landed on a piece if there isn't one already selected. 
+// If a piece is already selected, call movePiece.
 function getCursorPosition(canvas, event) {
     const rect = canvas.getBoundingClientRect()
     // Uses findGrid to round mouse position to nearest 100
