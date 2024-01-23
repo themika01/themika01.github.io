@@ -153,3 +153,57 @@ th {
         margin: 10px 0 10px 0;
     }
 }
+
+
+
+
+/* Dropdown Menu Stuff */
+.dropBtn {
+    cursor: pointer;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.drop-down-section {
+    position: absolute;
+    width: 20%;
+    z-index: 100;
+    top: 50px;
+    padding: 5px;
+    background:
+        linear-gradient(rgba(56, 24, 47, 0.8), rgba(56, 24, 47, 0.4));
+    border: 2px solid #e0ca78;
+    border-radius: 4px;
+}
+
+#general-history-section {
+    left: 20%;
+}
+
+#fascisms-section {
+    left: 40%;
+}
+
+#figures-section {
+    left: 60%;
+}
+
+#further-section {
+    left: 80%;
+}
+
+.hidden {
+    display: none;
+}
+
+.drop-down-section a {
+    display: block;
+    color: #e0ca78;
+}
+
+.show {
+    display: block;
+}

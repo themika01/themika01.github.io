@@ -12,10 +12,39 @@
         <table id="nav-table">
             <tr>
                 <td class="oopsie"><button>Home</button></td>
-                <td class="oopsie"><button>General History</button></td>
-                <td class="oopsie"><button>Fascisms</button></td>
-                <td class="oopsie"><button>Fascist Figures</button></td>
-                <td class="oopsie"><button>Further Reading</button></td>
+                <div class="dropdown">
+                    <td class="oopsie"><button class="dropBtn" onclick="openDrop(0)">General History</button></td>
+                    <div class="hidden drop-down-section" id="general-history-section">
+                        <a href="">The Origins of Fascism</a>
+                        <a href="">Defining Fascism</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <td class="oopsie"><button class="dropBtn" onclick="openDrop(1)">Fascisms</button></td>
+                    <div class="hidden drop-down-section" id="fascisms-section">
+                        <a href="">Italian Fascism</a>
+                        <a href="">German Fascism/Naziism</a>
+                        <a href="">Spanish Fascism/Francoism</a>
+                        <a href="">British Fascism</a>
+                        <a href="">Japanese Fascism</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <td class="oopsie"><button class="dropBtn" onclick="openDrop(2)">Fascist Figures</button></td>
+                    <div class="hidden drop-down-section" id="figures-section">
+                        <a href="">Mussolini</a>
+                        <a href="">Hitler</a>
+                        <a href="">Franco</a>
+                        <a href="">Mosely</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <td class="oopsie"><button class="dropBtn" onclick="openDrop(3)">Further Reading</button></td>
+                    <div class="hidden drop-down-section" id="further-section">
+                        <a href="">Neo-Fascism</a>
+                        <a href="">Bibliography</a>
+                    </div>
+                </div>
             </tr>
         </table>
     </div>
@@ -90,5 +119,6 @@
               </tbody>
         </div>
     </div>
+    <script src="script.js"></script> 
 </body>
 </html>
