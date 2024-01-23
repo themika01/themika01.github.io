@@ -1,9 +1,0 @@
---Draw the rest of the chess pieces--
-2. Detect when the user clicks on a chess piece
-3. Highlight the chess piece detected
-4. Move chess pieces anywhere
-5. Change turns with submit button
-6. Chess piece movement rules
-7. Taking other pieces
-8. Detecting check
-9. Detecting checkmate

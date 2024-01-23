@@ -1,232 +1,155 @@
-* {box-sizing: border-box;}
+@font-face {
+    font-family: 'F-Gothic';
+    src: url(Olondon_.otf);
+    font-weight: normal;
+    font-style: cursive;
+}
+
+* {
+    color: #ededed;
+}
 
 body {
-    background-color: #43586d;
+    background-color: #170A1C;
     margin: 0;
-    font-size: 18px;
-    color: #feebb2;
-}
-
-a {
-    color: #feebb2;
-}
-
-a:visited {
-    color: #ffe189;
-}
-
-.movie-recs {
-    border: 1px solid #feebb2;
-}
-
-#musicstuff {
-    text-align: center;
-}
-
-figure {
-    text-align: center;
-    display: inline-block;
-}
-
-header {
-    text-align: center;
-}
-
-#selected-section {
-    background-color: #2b3239;
-}
-
-#title {
-    background-color: #2b3239;
-}
-
-#head-table {
-    margin: auto;
-    width: 50%;
-    background-color: #393f45;
-}
-
-.head-link {
-    color: #ffbd9b;
-    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 #nav-bar {
-    background-color: #393f45;
-    margin-bottom: 5vh;
+    background-color: #2e1828;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%);
+    width: 75%;
+    height: 50px;
+    z-index: 100;
+    border-bottom: 2px solid #7189CB;
 }
 
-h1 {
-    color: #FF6C22;
-    margin: 0px;
-    text-align: center;
+button {
+    background-color: #183D45;
+    border: 2px outset #4b61d1;
+    border-radius: 5px;
+    padding: 5px;
+    width: 100%;
+    height: 100%;
 }
 
-h2 {
-    color: #FF6C22;
-    margin: 0;
+button:hover {
+    cursor: pointer;
+    border: 2px inset #4b61d1;
+    background-color: #143036;
+}
+
+#nav-table {
+    border: none;
+    padding: 0px;
+    position: absolute;
+    top: 50%;
+    transform: translate( 0, -50%);
+}
+
+.oopsie {
+    border: none;
+    padding: 0px;
+    width: 20%;
+    height: 45px;
+}
+
+#main-content-div {
+    width: 75%;
+    height: 100%;
+    background-color: #38182F;
+    border-left: 3px #4b61d1 solid;
+    border-right: 3px solid #4b61d1;
+    flex: 1;
+}
+
+#top-window-div {
+    background:
+        linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.8)),
+        url("Banner.png"); /* Citation https://www.flickr.com/photos/pingnews/340925322/in/album-72157594333669521/ */
+    background-repeat: no-repeat;
+    background-color: #BC4749;
+    height: 500px;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 2px solid #7189CB;
+}
+
+#title-heading {
+    background: linear-gradient(rgba(219,80,74,0.6), rgba(219,80,74,0.8));
+    padding: 5px 15px 5px 15px;
+    border: solid #e0ca78 3px;
+    border-radius: 5px;
+    font-family: F-Gothic, Serif;
+    font-size: 2rem;
+}
+
+.content-div {
+    border: 2px solid #7189CB;
+    margin: 10px 20px 10px 20px;
+    padding: 5px;
+    border-radius: 5px;
+    background-color: #183D45;
+    overflow: auto;
+}
+
+.content-div::after {
+    content: "";
+    clear: both;
+    display: table;
 }
 
 h3 {
-    color: #FF6C22;
-    margin-left: 5px;
+    text-decoration: underline;
 }
 
-.pronouns {
-    margin: 0;
-    color: #feebb2;
+.content-div > p {
+    line-height: 1.4;
 }
 
-#main-content {
-    border: 3px solid #feebb2;
-    border-radius: 20px;
-    background-color: #1a334c;
-    width: 70%;
-    height: 80vh;
-    margin: auto;
-    overflow: hidden;
-    position: relative;
-    padding: 50px;
-    overflow: scroll;
+th, td {
+    border: 2px solid #7189CB;
 }
 
-#pfp {
-    width: 140px;
-    margin: 0;
-    vertical-align: middle;
-}
-
-#pfp-container {
-    border: 3px solid #feebb2;
-    border-radius: 50%;
-    width: fit-content;
-    height: fit-content;
-    overflow: hidden;
-    float: left;
-}
-
-#basic-information {
-    position: relative;
-    display: inline-block;
-    margin-bottom: 25px;
-}
-
-#basic-info-text {
-    height: fit-content;
-    width: 150px;
-    display: inline-block;
-    margin-left: 15px;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-}
-
-.more-information {
+table {
     width: 100%;
-    border: 3px outset #feebb2;
+    text-align: center;
+}
+
+td, th {
     padding: 5px;
-    margin-bottom: 40px;
-    display: block;
-    background-color: #1a334c;
-    color: #feebb2;
-    font-size: 18px;
-}
-
-.more-information-selected {
-    width: 100%;
-    border: 3px outset #feebb2;
-    padding: 5px;
-    margin-bottom: 40px;
-    display: block;
-    background-color: #174875;
-    color: #feebb2;
-    font-size: 18px; 
-}
-
-.more-information:hover {
-    border: 3px inset #feebb2;
-    cursor: pointer;
-}
-
-.more-information-selected:hover {
-    border: 3px inset #feebb2;
-    cursor: pointer;
-}
-
-#more-info-container {
-    display: inline-block;
     width: 25%;
-    margin-right: 20px;
 }
 
-.button-content-hidden {
-   display: none;
+th {
+    background-color: #2c535b;
+    text-decoration: underline;
+    font-size: 1.1rem;
 }
 
-.button-content-shown {
-    border: 3px outset #feebb2;
-    background-color: #133452;
-    display: inline-block;
-    width: 70%;
-    padding: 15px;
-    position: absolute;
-    overflow: scroll;
-}
+/* Mobile screen changes */
+@media screen and (max-width: 600px) {
+    #main-content-div {
+        width: 100%;
+        border: none;
+    }
 
-#music-table {
-    width: 100%;
-}
-
-@media screen and (max-width: 700px) {
-    
     #nav-bar {
-        margin-bottom: 0;
-    }
-    
-    #main-content {
-        border-radius: 0px;
         width: 100%;
-        height: 100vh;
-        padding: 10px;
+        margin: 0;
     }
 
-    .button-content-shown {
-        width: 60%;
-    }
-
-    .more-information {
-        width: 25%;
-        position: absolute;
-    }
-
-    .more-information-selected {
-        position: absolute;
-        width: 25%;
-    }
-    
-    #about {
-        left: 0;
-    }
-
-    #socials {
-        left: 25%;
-    }
-
-    #music {
-        left: 50%;
-    }
-
-    #movie {
-        left: 75%;
-    }
-
-    .button-content-shown {
-        top: 35%;
-    }
-
-    .button-content-shown {
-        width: 100%;
-        position: absolute;
-        left: 0;
+    .content-div {
+        margin: 10px 0 10px 0;
     }
 }

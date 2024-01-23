@@ -2,136 +2,92 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css" type="text/css">
-    <title>Mikas Cool Website</title>
+    <link type="text/css" rel="stylesheet" href="style.css"/>
+    <title>Fascopedia</title>
 </head>
 <body>
-    <header>
-        <h1 id="title">Mika's Cool Website</h1>
-        <div id="nav-bar">
-            <table id="head-table">
+    <div id="nav-bar">
+        <table id="nav-table">
+            <tr>
+                <td class="oopsie"><button>Home</button></td>
+                <td class="oopsie"><button>General History</button></td>
+                <td class="oopsie"><button>Types of Fascism</button></td>
+                <td class="oopsie"><button>Fascist Figures</button></td>
+                <td class="oopsie"><button>Further Reading</button></td>
+            </tr>
+        </table>
+    </div>
+    <div id="main-content-div">
+        <div id="top-window-div" title="Photo of Italian Fascists at a Mussolini march in 1930. From the Encyclopedia Brittanica article on the PNF.">
+            <div id="title-heading">
+                <h1>Fascopedia</h1>
+            </div>
+        </div>
+        <div class="content-div">
+            <h3>About this page</h3>
+            <p>I built this website to make a general resource for the history of Fascism as it existed until
+                roughly 1945. The point of this website is to be an educational tool about historical Fascism: its belief systems, its political strategies, why it came to 
+                dominate some governments across the world, and how it failed. Another additional purpose for this website is for it to be an academically rigourous study in Fascism 
+                which is easily available to the public. I feel there's a serious lack of publicly available discussion on the subject from historians, and where there is discussion, 
+                it's generally locked behind expensive books or paywalled academic journals. This is my attempt, as a historian with a university degree, 
+                to bring information that's normally locked behind those paywalls into a more public view. My general hope is that by learning about the Fascisms of the past we can be better 
+                prepared to combat Fascism in the present day and in the future.
+            </p>
+            <p>This webpage was coded from scratch. No website creation tools or AI text generators were used to build it.</p>
+        </div>
+        <div class="content-div">
+            <h3>Important Disclaimer</h3>
+            <p>Fascism is almost as controversial a topic today as it was during its hayday in the 1930s. There has been a general dilution of the term "Fascist" into a meaningless term thrown around 
+                as an insult at political parties on all parts of the political spectrum. This page's  scope is specifically 
+                about the Fascist movements that existed in the 1900s. Present-day Fascists share the same ideological framework as Mussolini and Hitler, but not always the exact 
+                same beliefs or tactics. Basing all your knowledge of Fascism from its 20th century beliefs runs the danger of being blind to "Neo-Fascism" as it exists in the 21st century. 
+                There is a recommended reading section on modern "Neo-Fascist" movements on this website - do not take 20th century Fascism as your be-all-end-all understanding of 21st century Fascism.
+            </p>
+        </div>
+        <div class="content-div">
+            <table>
                 <tr>
-                    <td  id="selected-section"><a href="index.html" class="head-link">About Me</a></td>
-                    <!-- <td><a href="projects.html" class="head-link">My Projects</a></td> -->
+                    <th colspan="4">Articles on this Site</th>
                 </tr>
-            </table>
+                <tr>
+                    <th><b>General</b></th>
+                    <th><b>Types</b></th>
+                    <th><b>People</b></th>
+                    <th><b>Further Reading</b></th>
+                </tr>
+                <tr>
+                    <td>Origins</td>
+                    <td>Italian</td>
+                    <td>Mussolini</td>
+                    <td>Neo-Fascism</td>
+                </tr>
+                <tr>
+                    <td>Defining</td>
+                    <td>German</td>
+                    <td>Hitler</td>
+                    <td>Bibliography</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>Spanish</td>
+                    <td>Franco</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>British</td>
+                    <td>Mosley</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>Japanese</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+              </tbody>
         </div>
-    </header>
-    <main>
-        <div id="main-content">
-            <div id="basic-information">
-                <div id="pfp-container"><img src="images/pfpmaybe.png" id="pfp" alt="A picture of a cartoon man smiling - my profile picture"></div>
-                <div id="basic-info-text">
-                    <h2 id="name">Mika</h2>
-                    <h3 class="pronouns">He/Him</h3>
-                    <h3 class="pronouns">Also go by JJ</h3>
-                </div>
-            </div>
-            <br>
-            <div id="more-info-container">
-                <button class="more-information" id="about">About This Site</button>
-                <button class="more-information" id="socials">Social Media</button>
-                <button class="more-information" id="music">Music</button>
-                <button class="more-information" id="movie">Movies</button>
-            </div>
-            <div class="button-content-hidden" id="about-content">
-                <h2>About the Website</h2>
-                <p>Hello! I am Mika, and I made this website mainly to practice my design and coding skills. On this page you can find where I am online
-                    , and also see the sorts of music and movies I like - I'm not very good at writing about myself, so instead you can learn about me that way.
-                    When I set it up, you'll also be able to go to the projects page to learn more about the things I have created or worked on. This will include
-                    random tiny coding projects I do for basic practice, and also anything larger, like if I create a whole new website.
-                </p>
-            </div>
-            <div class="button-content-hidden" id="social-content">
-                <h2>Socials</h2>
-                <table>
-                    <tr>
-                        <td><img src="https://assets-global.website-files.com/6257adef93867e50d84d30e2/636e0a6a49cf127bf92de1e2_icon_clyde_blurple_RGB.png"
-                             width="50px" alt="Discord logo"></td>
-                        <td>mika_</td>
-                    </tr>
-                    <tr>
-                        <td><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Instagram_logo_2016.svg/2048px-Instagram_logo_2016.svg.png" 
-                            width="50px" alt="Instagram Logo"/></td>
-                        <td>M.ika01</td>
-                    </tr>
-                </table>
-            </div>
-            <div class="button-content-hidden" id="music-content">
-                <h2>Music I Like</h2>
-                <div id="musicstuff">
-                    <figure>
-                        <img src="https://upload.wikimedia.org/wikipedia/en/3/39/MGMT_-_Congratulations.png" 
-                        alt="Album cover for Congratulations by MGMT" width="150px">
-                        <figcaption><a href="https://youtu.be/e1mMGhgyKsk">Congratulations by MGMT</a></figcaption>
-                    </figure>
-                    <figure>
-                        <img src="https://upload.wikimedia.org/wikipedia/en/c/c3/Cant_Maintain.jpg"
-                            alt="Album cover for Can't Maintain by AJJ" width="150px">
-                        <figcaption><a href="https://youtu.be/AuNuVCVC92k">Can't Maintain by AJJ</a></figcaption>
-                    </figure>
-                    <figure>
-                        <img src="https://upload.wikimedia.org/wikipedia/en/4/4d/Vampire_Weekend_-_Modern_Vampires_of_the_City.png" 
-                            alt="Album cover for Modern Vampires of the City by Vampire Weekend" width="150px">
-                        <figcaption><a href="https://youtube.com/playlist?list=PLpSMVsIRq-N9T7IXvGJYZc93CUYE31VtQ">
-                            Modern Vampires by Vampire Weekend</a></figcaption>
-                    </figure>
-                    <figure>
-                        <img src="https://upload.wikimedia.org/wikipedia/en/2/25/Burst_Apart_%28Front_Cover%29.png"
-                            alt="Album cover for Burst Apart by The Antlers" width="150px">
-                        <figcaption><a href="https://youtu.be/bv0YOgMqhNY">Burst Apart by The Antlers</a></figcaption>
-                    </figure>
-                    <figure>
-                        <img src="https://upload.wikimedia.org/wikipedia/en/3/36/Gulag_Orkestar_%28Front_Cover%29.png"
-                            alt="Album cover for Gulag Orkestar by Beirut" width="150px">
-                        <figcaption><a href="https://youtu.be/eMokcBYosGk">Gulag Orkestar by Beirut</a></figcaption>
-                    </figure>
-                    <figure>
-                        <img src="https://f4.bcbits.com/img/a3955451029_10.jpg"
-                            alt="Album cover for Hawaii: Part II by Miracle Musical" width="150px">
-                        <figcaption><a href="https://youtu.be/NbtsZJXnzFY">Hawaii: Part II by Miracle Musical</a></figcaption>
-                    </figure>
-                </div>
-            </div>
-            <div class="button-content-hidden" id="movie-content">
-                <h2>Movie Recommendations</h2>
-                <div class="movie-recs">
-                    <h3>Favorite Movies</h2>
-                    <ul>
-                        <li>The Grand Budapest Hotel</li>
-                        <li>BARDO: False Chronical of a Handful of Truths</li>
-                        <li>Blade Runner 2048</li>
-                        <li>Lord of the Rings trillogy</li>
-                        <li>Children of Men</li>
-                        <li>Cmon Cmon</li>
-                        <li>Phantom Thread</li>
-                        <li>There Will Be Blood</li>
-                    </ul>
-                </div>
-                <div class="movie-recs">
-                    <h3>History Movies</h3>
-                    <ul>
-                        <li>Come and See</li>
-                        <li>1917</li>
-                        <li>The Green Knight</li>
-                        <li>Jojo Rabbit</li>
-                        <li>The Witch</li>
-                        <li>In This Corner of the World</li>
-                        <li>The Revenant</li>
-                    </ul>
-                </div>
-                <div class="movie-recs">
-                    <h3>Documentaries</h3>
-                    <ul>
-                        <li>Lessons of Darkness</li>
-                        <li>The Great Ecstasy of the Woodcarver Walter Steiner</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </main>
+    </div>
 </body>
-<script src="script.js"></script>
 </html>
