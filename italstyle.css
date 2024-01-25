@@ -162,6 +162,10 @@ h2 {
     border-collapse: collapse;
 }
 
+td {
+    padding: 5px 2px;
+}
+
 .year-block {
     width: 10%;
     border-bottom: 1px dashed black;
