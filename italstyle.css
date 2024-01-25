@@ -208,6 +208,14 @@ td {
     border-bottom: 1px dashed black;
 }
 
+.centered {
+    text-align: center;
+}
+
+.bordered {
+    border: 1px dashed black;
+}
+
 @media screen and (max-width: 600px) {
     #main-content-div {
         width: 100%;
