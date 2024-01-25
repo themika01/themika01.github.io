@@ -27,7 +27,9 @@ body {
     width: 75%;
     height: 50px;
     z-index: 100;
-    border-bottom: 2px solid #7189CB;
+    border-left: 3px solid #4b61d1;
+    border-right: 3px solid #4b61d1;
+    border-bottom: 3px solid #4b61d1;
 }
 
 button {
@@ -67,6 +69,8 @@ button:hover {
     border-left: 3px #4b61d1 solid;
     border-right: 3px solid #4b61d1;
     flex: 1;
+    position: relative;
+    top: 50px;
 }
 
 #top-window-div {
@@ -137,26 +141,6 @@ th {
     font-size: 1.1rem;
 }
 
-/* Mobile screen changes */
-@media screen and (max-width: 600px) {
-    #main-content-div {
-        width: 100%;
-        border: none;
-    }
-
-    #nav-bar {
-        width: 100%;
-        margin: 0;
-    }
-
-    .content-div {
-        margin: 10px 0 10px 0;
-    }
-}
-
-
-
-
 /* Dropdown Menu Stuff */
 .dropBtn {
     cursor: pointer;
@@ -169,7 +153,7 @@ th {
 
 .drop-down-section {
     position: absolute;
-    width: 20%;
+    width: 15%;
     z-index: 100;
     top: 50px;
     padding: 5px;
@@ -206,4 +190,26 @@ th {
 
 .show {
     display: block;
+}
+
+/* Mobile screen changes */
+@media screen and (max-width: 600px) {
+    #main-content-div {
+        width: 100%;
+        border: none;
+    }
+
+    #nav-bar {
+        width: 100%;
+        margin: 0;
+    }
+
+    .content-div {
+        margin: 10px 0 10px 0;
+    }
+
+    .drop-down-section {
+        background-color: rgb(56, 24, 47);
+        width: 40%;
+    }
 }
