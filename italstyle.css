@@ -119,7 +119,7 @@ button:hover {
 #top-window-div {
     background:
         linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.8)),
-        url("Banner.png");
+        url("img/Banner.png");
     background-repeat: no-repeat;
     background-color: #BC4749;
     height: 200px;

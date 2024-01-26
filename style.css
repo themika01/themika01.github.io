@@ -9,6 +9,10 @@
     color: #ededed;
 }
 
+p {
+    font-size: 18px;
+}
+
 body {
     background-color: #170A1C;
     margin: 0;
@@ -68,6 +72,7 @@ button:hover {
     background-color: #38182F;
     border-left: 3px #4b61d1 solid;
     border-right: 3px solid #4b61d1;
+    border-bottom: 3px solid #4b61d1;
     flex: 1;
     position: relative;
     top: 50px;
@@ -76,7 +81,7 @@ button:hover {
 #top-window-div {
     background:
         linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.8)),
-        url("Banner.png"); /* Citation https://www.flickr.com/photos/pingnews/340925322/in/album-72157594333669521/ */
+        url("img/Banner.png"); /* Citation https://www.flickr.com/photos/pingnews/340925322/in/album-72157594333669521/ */
     background-repeat: no-repeat;
     background-color: #BC4749;
     height: 500px;
@@ -87,6 +92,26 @@ button:hover {
     justify-content: center;
     align-items: center;
     border-bottom: 2px solid #7189CB;
+}
+
+.hero-image-div {
+    background-color: #BC4749;
+    height: 300px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 2px solid #7189CB;
+}
+
+#origins-hero-image {
+    background:
+        linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.8)),
+        url("img/origins.jpg");
+    background-position: center;
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
 }
 
 #title-heading {
@@ -192,6 +217,26 @@ th {
     display: block;
 }
 
+.center {
+    text-align: center;
+}
+
+.govts {
+    height: 600px;
+    outline: 3px ridge #e0ca78;
+}
+
+sup {
+    color: #e0ca78;
+}
+
+.completed {
+    background-color: #216e35;
+}
+
+.WIP {
+    background-color: #103b7a;
+}
 /* Mobile screen changes */
 @media screen and (max-width: 600px) {
     #main-content-div {
@@ -211,5 +256,9 @@ th {
     .drop-down-section {
         background-color: rgb(56, 24, 47);
         width: 40%;
+    }
+
+    .govts {
+        height: 300px;
     }
 }
