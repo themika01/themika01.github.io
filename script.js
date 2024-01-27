@@ -3,8 +3,9 @@ let generalSection = document.getElementById("general-history-section")
 let fascismsSection = document.getElementById("fascisms-section");
 let figuresSection = document.getElementById("figures-section");
 let furtherSection = document.getElementById("further-section");
+let mobileSection = document.getElementById("mobile-section");
 // Sections array
-let sections = [generalSection, fascismsSection, figuresSection, furtherSection];
+let sections = [generalSection, fascismsSection, figuresSection, furtherSection, mobileSection];
 
 function openDrop(number) {
     sections[number].classList.toggle("show");

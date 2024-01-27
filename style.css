@@ -51,7 +51,7 @@ button:hover {
     background-color: #143036;
 }
 
-#nav-table {
+#nav-table-desktop {
     border: none;
     padding: 0px;
     position: absolute;
@@ -204,6 +204,10 @@ th {
     left: 80%;
 }
 
+#mobile-section {
+    width: 100vw;
+}
+
 .hidden {
     display: none;
 }
@@ -211,6 +215,10 @@ th {
 .drop-down-section a {
     display: block;
     color: #e0ca78;
+}
+
+.drop-down-section p {
+    font-size: 14px;
 }
 
 .show {
@@ -237,6 +245,11 @@ sup {
 .WIP {
     background-color: #103b7a;
 }
+
+#nav-opener-mobile {
+    display: none;
+}
+
 /* Mobile screen changes */
 @media screen and (max-width: 600px) {
     #main-content-div {
@@ -247,6 +260,10 @@ sup {
     #nav-bar {
         width: 100%;
         margin: 0;
+    }
+
+    #nav-table-desktop {
+        display: none;
     }
 
     .content-div {
@@ -260,5 +277,11 @@ sup {
 
     .govts {
         height: 300px;
+    }
+
+    #nav-opener-mobile {
+        display: block;
+        position: absolute;
+        top: 0;
     }
 }
