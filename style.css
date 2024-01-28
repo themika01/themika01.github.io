@@ -182,8 +182,7 @@ th {
     z-index: 100;
     top: 50px;
     padding: 5px;
-    background:
-        linear-gradient(rgba(56, 24, 47, 0.8), rgba(56, 24, 47, 0.4));
+    background:rgba(27, 12, 22, 0.9);
     border: 2px solid #e0ca78;
     border-radius: 4px;
 }
