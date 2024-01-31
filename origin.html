@@ -12,8 +12,13 @@
     <meta content="https://themika01.github.io/" property="og:url" />
     <meta content="https://themika01.github.io/img/favicon-big.png" property="og:image" />
     <meta content="#dd3d3d" data-react-helmet="true" name="theme-color" />
+    <!-- Noto-Sans font import -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!-- Nav Bar Section -->
     <div id="nav-bar">
         <table id="nav-table-desktop">
             <tr>
@@ -53,6 +58,7 @@
                 </div>
             </tr>
         </table>
+        <!-- Nav Bar for Mobile Screens -->
         <button id="nav-opener-mobile" class="dropBtn" onclick="openDrop(4)">Navigate Articles</button>
         <div class="hidden drop-down-section" id="mobile-section">
             <a href="index.html">Home</a>
@@ -75,6 +81,7 @@
             <p>Bibliography</p>
         </div>
     </div>
+    <!-- Website Content -->
     <div id="main-content-div">
         <div class="hero-image-div" id="origins-hero-image" title="Photo of Italian Fascists at a Mussolini march in 1930. From the Encyclopedia Brittanica article on the PNF.">
             <div id="title-heading">
@@ -101,8 +108,7 @@
                 Over the course of the 1800s various European states adopted Liberal positions. These included two of the most powerful nations in the world, Britain and France. 
                 Italy also adopted a Liberal-leaning constitution when it united in the later 1800s. Against Liberalism stood the forces of Conservative monarchies, the most powerful being in Germany, Austria-Hungary, and Russia.
             </p>
-            <!-- Not sure why this needs to have a whole div to itself to be centered. It's selfish ig -->
-            <div class="center">
+            <div class="center"> <!-- Not sure why this needs to have a whole div to itself to be centered. It's selfish ig -->
                 <a href="img/govts1890.png"><img class="govts" src="img/govts1890.png" title="Map of major European governments in 1890" alt="A map showing European borders in 1890. The monarchies, shown in red, are: Germany, Austria-Hungary, Russia, and Spain. The Constitutional Monarchies (liberal governments), shown in purple, are: Great Britain and Italy. The only Liberal Republic on the map is France, shown in blue."></a>
             </div>
         </div>

@@ -9,8 +9,12 @@
     color: #ededed;
 }
 
-p {
-    font-size: 18px;
+p, a {
+    font-size: 16px;
+}
+
+a {
+    color: #e0ca78;
 }
 
 body {
@@ -20,6 +24,7 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    font-family: "Noto Sans", sans-serif;
 }
 
 #nav-bar {
@@ -140,6 +145,7 @@ button:hover {
 
 h3 {
     text-decoration: underline;
+    font-size: 1.4rem;
 }
 
 .content-div > p {
@@ -216,10 +222,6 @@ th {
     color: #e0ca78;
 }
 
-.drop-down-section p {
-    font-size: 14px;
-}
-
 .show {
     display: block;
 }
@@ -238,11 +240,11 @@ sup {
 }
 
 .completed {
-    background-color: #216e35;
+    background-color: #0c2b14;
 }
 
 .WIP {
-    background-color: #103b7a;
+    background-color: #07172e;
 }
 
 #nav-opener-mobile {
