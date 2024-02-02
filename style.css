@@ -115,9 +115,26 @@ button:hover {
     background:
         linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.8)),
         url("img/origins.jpg");
-    background-position: center;
     background-size: cover;
     background-position: top;
+    background-repeat: no-repeat;
+}
+
+.disclaimer {
+    padding: 0px 15px;
+}
+
+.date {
+    font-size: 12px;
+    margin: -10px 0;
+}
+
+#blog-hero-image {
+    background:
+        linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.8)),
+        url("img/blog.jpg"); /* https://commons.wikimedia.org/wiki/File:Liberation_of_Stalag_7a,_Moosburg,_Germany_BU7126.jpg */
+    background-position: center;
+    background-size: cover;
     background-repeat: no-repeat;
 }
 
@@ -213,6 +230,8 @@ th {
 
 #mobile-section {
     width: 100vw;
+    height: 500px;
+    overflow: scroll;
 }
 
 .hidden {
