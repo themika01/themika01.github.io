@@ -120,6 +120,15 @@ button:hover {
     background-repeat: no-repeat;
 }
 
+#italian-hero-image {
+    background:
+        linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.8)),
+        url("img/italian.jpg"); /* https://commons.wikimedia.org/wiki/File:Adunata_opera_Dalmine_1942.jpg */
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
+}
+
 .disclaimer {
     padding: 0px 15px;
 }
@@ -270,6 +279,64 @@ sup {
 
 #nav-opener-mobile {
     display: none;
+}
+
+.nospacing {
+    border-spacing: 0;
+}
+
+.event {
+    border: 1px solid #7189CB;
+    text-align: left;
+}
+
+.event-noborder {
+    border-top: none;
+    border-bottom: none;
+    border-left: 1px solid #7189CB;
+    border-right: 1px solid #7189CB;
+}
+
+.line-black {
+    background-color: rgb(13, 13, 13);
+    width: 10%;
+    border: none;
+    font-size: 25px;
+}
+
+.line-red {
+    background-color: rgb(112, 30, 30);
+    width: 10%;
+    border: none;
+    font-size: 25px;
+}
+
+.line-darkred {
+    background-color: rgb(63, 18, 18);
+    width: 10%;
+    border: none;
+    font-size: 25px;
+}
+
+.line-darkdarkgreen {
+    background-color: rgb(12, 20, 12);
+    width: 10%;
+    border: none;
+    font-size: 25px;
+}
+
+.line-darkgreen {
+    background-color: rgb(19, 35, 19);
+    width: 10%;
+    border: none;
+    font-size: 25px;
+}
+
+.line-green {
+    background-color: rgb(30, 53, 30);
+    width: 10%;
+    border: none;
+    font-size: 25px;
 }
 
 /* Mobile screen changes */
