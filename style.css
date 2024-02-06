@@ -13,6 +13,10 @@ p, a {
     font-size: 16px;
 }
 
+.bigger {
+    font-size: 18px;
+}
+
 a {
     color: #e0ca78;
 }
@@ -83,6 +87,16 @@ button:hover {
     flex: 1;
     position: relative;
     top: 50px;
+}
+
+.quickinfo {
+    text-align: left;
+    margin: auto;
+    width: 50%;
+}
+
+.quick-logo {
+    height: 200px;
 }
 
 #top-window-div {
@@ -265,6 +279,11 @@ th {
     outline: 3px ridge #e0ca78;
 }
 
+.italImage {
+    height: 400px;
+    outline: 3px ridge #e0ca78;
+}
+
 sup {
     color: #e0ca78;
 }
@@ -297,46 +316,48 @@ sup {
     border-right: 1px solid #7189CB;
 }
 
-.line-black {
+.line {
+    width: 10%;
+    border: none;
+    font-size: 25px;
+}
+
+.line-border {
+    width: 10%;
+    font-size: 25px;
+    border-top: 1px dashed white;
+    border-left: none;
+    border-right: none;
+    border-bottom: none;
+}
+
+.black {
     background-color: rgb(13, 13, 13);
-    width: 10%;
-    border: none;
-    font-size: 25px;
 }
 
-.line-red {
+.red {
     background-color: rgb(112, 30, 30);
-    width: 10%;
-    border: none;
-    font-size: 25px;
 }
 
-.line-darkred {
+.darkred {
     background-color: rgb(63, 18, 18);
-    width: 10%;
-    border: none;
-    font-size: 25px;
 }
 
-.line-darkdarkgreen {
+.darkdarkgreen {
     background-color: rgb(12, 20, 12);
-    width: 10%;
-    border: none;
-    font-size: 25px;
 }
 
-.line-darkgreen {
+.darkgreen {
     background-color: rgb(19, 35, 19);
-    width: 10%;
-    border: none;
-    font-size: 25px;
 }
 
-.line-green {
+.green {
     background-color: rgb(30, 53, 30);
-    width: 10%;
-    border: none;
-    font-size: 25px;
+}
+
+.map {
+    height: 800px;
+    outline: 3px ridge #e0ca78;
 }
 
 /* Mobile screen changes */
@@ -372,5 +393,14 @@ sup {
         display: block;
         position: absolute;
         top: 0;
+    }
+
+    .quickinfo {
+        width: 100%;
+    }
+
+    .map {
+        height: 100%;
+        width: 100%;
     }
 }
