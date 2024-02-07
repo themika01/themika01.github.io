@@ -385,10 +385,6 @@ sup {
         width: 40%;
     }
 
-    .govts {
-        height: 300px;
-    }
-
     #nav-opener-mobile {
         display: block;
         position: absolute;
@@ -401,6 +397,11 @@ sup {
 
     .map {
         height: 100%;
+        width: 100%;
+    }
+
+    .govts, .italImage {
+        height: auto;
         width: 100%;
     }
 }
